@@ -71,9 +71,7 @@ import UIKit
         
         let attributedTextArray = self.attributedTextArrayFromRanges(rangesArray, baseAttributedString: self.revealLabel1.attributedText)
         
-        dispatch_async(dispatch_get_main_queue()) {
-            self.animateTextAtIndex(0, fromArray: attributedTextArray, duration: self.fadeDuration, delay: self.fadeDelay)
-        }
+        self.animateTextAtIndex(0, fromArray: attributedTextArray, duration: self.fadeDuration, delay: self.fadeDelay)
     }
     
     private func letterRangeDictionaryFromText(text: NSString) -> [String : [NSRange]] {
